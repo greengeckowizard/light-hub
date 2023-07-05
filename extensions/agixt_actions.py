@@ -3,25 +3,6 @@ import json
 import requests
 import os
 import subprocess
-import sys
-
-try:
-    import torch
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "torch==1.10.0"])
-    import torch
-try:
-    from transformers import BlipProcessor, BlipForConditionalGeneration
-except ImportError:
-    subprocess.check_call(
-        [sys.executable, "-m", "pip", "install", "transformers[accelerate]==4.30.1"]
-    )
-    from transformers import BlipProcessor, BlipForConditionalGeneration
-try:
-    from PIL import Image
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pillow==9.5.0"])
-    from PIL import Image
 from typing import List
 from Extensions import Extensions
 from agixtsdk import AGiXTSDK
@@ -45,7 +26,6 @@ class agixt_actions(Extensions):
             "Generate Agent Helper Chain": self.generate_helper_chain,
             "Ask for Help or Further Clarification to Complete Task": self.ask_for_help,
             "Create a new command": self.create_command,
-            "Describe Image": self.describe_image,
             "Execute Python Code": self.execute_python_code,
             "Get Python Code from Response": self.get_python_code_from_response,
         }
@@ -407,31 +387,6 @@ class agixt_actions(Extensions):
             },
         )
         return response
-
-    async def describe_image(self, image_url):
-        """
-        Describe an image using FuseCap.
-        """
-        if image_url:
-            processor = BlipProcessor.from_pretrained("noamrot/FuseCap")
-            model = BlipForConditionalGeneration.from_pretrained("noamrot/FuseCap")
-
-            # Define the device to run the model on (CPU or GPU)
-
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            model.to(device)
-            raw_image = Image.open(requests.get(image_url, stream=True).raw).convert(
-                "RGB"
-            )
-
-            # Generate a caption for the image using FuseCap
-            text = "a picture of "
-            inputs = processor(raw_image, text, return_tensors="pt").to(device)
-            out = model.generate(max_length=20, temperature=0.7, **inputs, num_beams=3)
-            caption = processor.decode(out[0], skip_special_tokens=True)
-
-            # Return the caption
-            return caption
 
     async def get_python_code_from_response(self, response: str):
         if "```python" in response:
