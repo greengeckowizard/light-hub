@@ -1,4 +1,4 @@
-# AGiXT Hub
+# AGiXT Light Hub
 [![GitHub](https://img.shields.io/badge/GitHub-Sponsor%20My%20Development-blue?logo=github&style=plastic)](https://github.com/sponsors/Josh-XT)
 
 [![GitHub](https://img.shields.io/badge/GitHub-AGiXT%20Core-blue?logo=github&style=plastic)](https://github.com/Josh-XT/AGiXT) [![GitHub](https://img.shields.io/badge/GitHub-AGiXT%20Hub-blue?logo=github&style=plastic)](https://github.com/AGiXT/hub) [![GitHub](https://img.shields.io/badge/GitHub-AGiXT%20Python%20SDK-blue?logo=github&style=plastic)](https://github.com/AGiXT/python-sdk) [![GitHub](https://img.shields.io/badge/GitHub-AGiXT%20Streamlit%20Web%20UI-blue?logo=github&style=plastic)](https://github.com/AGiXT/streamlit)
@@ -8,7 +8,9 @@
 
 [![Logo](https://josh-xt.github.io/AGiXT/images/AGiXT-gradient-flat.svg)](https://josh-xt.github.io/AGiXT/)
 
-[AGiXT](https://github.com/Josh-XT/AGiXT) Hub for Open Source AGiXT Extensions, Chains, Prompts, and Agents.
+[AGiXT](https://github.com/Josh-XT/AGiXT) Light Hub for Open Source AGiXT Providers, Extensions, Chains, Prompts, and Agents.
+
+This repository will remain light weight to require the least amount of additional packages.  It will serve as a great baseline for anyone creating their own custom hubs, or use the [AGiXT Hub](https://github.com/AGiXT/hub) with all open source extensions as a starting point.
 
 
 ## Getting Started
