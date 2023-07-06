@@ -16,7 +16,7 @@ This repository will remain light weight to require the least amount of addition
 ## Getting Started
 
 - If you don't already have AGiXT, [follow this link for instructions to set it up.](https://github.com/Josh-XT/AGiXT#quick-start-guide)
-- Modify your `.env.example` file for AGiXT to change the `AGIXT_HUB` variable, this should be `AGiXT/hub` if you want to use the Open Source AGiXT hub (this). If you want to use your own fork of AGiXT hub, change this to your username and the name of your fork.
+- Modify your `.env.example` file for AGiXT to change the `AGIXT_HUB` variable, this should be `AGiXT/light-hub` if you want to use the light weight Open Source AGiXT hub (this). If you want to use your own fork of AGiXT hub, change this to your username and the name of your fork.
 
 ## More Documentation
 Want to know more about AGiXT?  Check out our [documentation](https://josh-xt.github.io/AGiXT/) or [GitHub](https://github.com/Josh-XT/AGiXT) page.
