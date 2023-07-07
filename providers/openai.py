@@ -59,6 +59,7 @@ class OpenaiProvider:
                     stop=None,
                 )
                 return response.choices[0].message.content.strip()
+
         except Exception as e:
             logging.info(f"OpenAI API Error: {e}")
             if int(self.WAIT_AFTER_FAILURE) > 0:
