@@ -1,0 +1,43 @@
+{
+    "commands": {
+        "Scrape Text with Playwright": false,
+        "Scrape Links with Playwright": false,
+        "Create Task Chain": false,
+        "Generate Extension from OpenAPI": false,
+        "Generate Agent Helper Chain": false,
+        "Ask for Help or Further Clarification to Complete Task": false,
+        "Create a new command": false,
+        "Execute Python Code": false,
+        "Get Python Code from Response": false,
+        "Write to File": false,
+        "Read File": false,
+        "Search Files": false,
+        "Append to File": false,
+        "Execute Python File": false,
+        "Delete File": false,
+        "Execute Shell": false,
+        "Indent String for Python Code": false,
+        "Generate Commands Dictionary": false,
+        "Read Audio from File": false,
+        "Read Audio": false,
+        "Generate Image with Stable Diffusion": false,
+        "Get Datetime": false,
+        "Use The Search Engine": false
+    },
+    "settings": {
+        "provider": "custom",
+        "AI_MODEL": "gpt-3.5-turbo-16k",
+        "AI_TEMPERATURE": "0.7",
+        "MAX_TOKENS": "16000",
+        "embedder": "default",
+        "AUTONOMOUS_EXECUTION": false,
+        "helper_agent_name": "easychat",
+        "API_KEY": "none",
+        "AI_TOP_P": "0.7",
+        "API_URI": "https://free.easychat.work/api/openai/v1/chat/completions",
+        "WAIT_BETWEEN_REQUESTS": "1",
+        "WAIT_AFTER_FAILURE": "3",
+        "WORKING_DIRECTORY": "./WORKSPACE",
+        "WORKING_DIRECTORY_RESTRICTED": "True"
+    }
+}
