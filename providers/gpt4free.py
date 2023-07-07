@@ -50,10 +50,6 @@ class Gpt4freeProvider:
         self.MAX_TOKENS = MAX_TOKENS
         self.FAILED_PROVIDERS = []
         self.providers = [  # Exclude providers that require auth
-            GetGpt,
-            Ails,
-            You,
-            Bing,
             Theb,
             Vercel,
             H2o,
