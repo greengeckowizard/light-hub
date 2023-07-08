@@ -43,7 +43,6 @@ class CustomProvider:
                 "top_p": float(self.AI_TOP_P),
                 "frequency_penalty": 0,
                 "presence_penalty": 0,
-                "stream": True,
             }
         else:
             # Use chat completion API
@@ -53,7 +52,6 @@ class CustomProvider:
                 "temperature": float(self.AI_TEMPERATURE),
                 "max_tokens": max_new_tokens,
                 "top_p": float(self.AI_TOP_P),
-                "stream": True,
             }
 
         response = requests.post(
