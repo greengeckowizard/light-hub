@@ -53,7 +53,7 @@ class CustomProvider:
                 "temperature": float(self.AI_TEMPERATURE),
                 "max_tokens": max_new_tokens,
                 "top_p": float(self.AI_TOP_P),
-                "stream": False,
+                "stream": True,
             }
 
         response = requests.post(
