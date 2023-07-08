@@ -43,7 +43,7 @@ class CustomProvider:
                 "top_p": float(self.AI_TOP_P),
                 "frequency_penalty": 0,
                 "presence_penalty": 0,
-                "stream": False,
+                "stream": True,
             }
         else:
             # Use chat completion API
